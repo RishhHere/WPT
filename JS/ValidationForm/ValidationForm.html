@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validate(){
+            let email = document.getElementById("email").value;
+            let contact = document.getElementById("contact").value;
+            let pass = document.getElementById("pass").value;
+            let confirmpass = document.getElementById("confirmpass").value;
+    
+            if(email==""||contact==""||pass==""||confirmpass==""){
+                alert("All fields are mandatory");
+                return false;
+            }
+            else if (contact.length<10 || contact.length>10){
+                alert("Please enter valid 10 digit number");
+                return false;
+            } else if (isNan(contact)){
+                alert("Only numbers are allowed");
+                return false;
+            }
+            else if (pass!=confirmpass){
+                alert("Passwords do not match");
+                return false;
+            }
+            else
+                return true;
+        }
+        
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    
+</head>
+<body>        
+    <form method="post" action="confirm.html" onsubmit="return validate()">
+        Email ID:           <input type="email" id="email"></input>
+        Contact:            <input type="text" id="contact"></input>
+        Password:           <input type="password" id="pass"></input>
+        Confirm Password:   <input type="password" id="confirmpass"></input>
+        <br>
+        <input type="submit" value="Submit data" ></input>
+    </form>
+</body>
+</html>
