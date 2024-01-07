@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function day(){
+            let selected = document.getElementById("num").value;
+            let ans;
+            switch(selected){
+                case '1': ans = "Monday"; break;
+                case '2': ans = "Tuesday"; break;
+                case '3': ans = "Wednesday"; break;
+                case '4': ans = "Thursday"; break;
+                case '5': ans = "Friday"; break;
+                case '6': ans = "Satday"; break;
+                case '7': ans = "Sunday"; break;
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Select an option: <select type="number" id="num" onchange="day()">
+            <option>Select a number: </option>
+            <option>1</option>
+            <option>2</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </select>
+
+        Day is: <span id="ans"></span>
+    </pre>
+</body>
+</html>

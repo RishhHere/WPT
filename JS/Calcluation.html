@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function cal(){
+            let n1 = parseInt(document.getElementById("n1").value);
+            let n2 = parseInt(document.getElementById("n2").value);
+            let op = document.getElementById("op").value;
+
+            let result;
+            switch(op){
+                case '+': result = n1+n2; break;
+                case '-': result = n1-n2; break;
+                case '/': result = n1/n2; break;
+                case '*': result = n1*n2; break;
+            }
+            // let res = `${n1} ${op} ${n2} = ${result}`;
+            //let res = `${result}`;
+            document.getElementById("ans").innerHTML = result;
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Enter number  : <input type="number" id="n1"/>
+        Enter number : <input type="number" id="n2"/>
+
+        Select an option: <select id="op" onchange="cal()">
+            <option>Select any 1</option>
+            <option>+</option>
+            <option>-</option>
+            <option>/</option>
+            <option>*</option>
+        </select>
+
+        Result : <span id="ans"></span>
+    </pre>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function funuc(){
+            let str = document.getElementById("text").value;
+            let ans = str.toUpperCase();
+            console.log(ans);
+            document.getElementById("ans").innerHTML = "<b>"+ans+"<b>";
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Enter text: <input type="text" placeholder="Enter text" id="text"/>
+        <input type="button" value="Convert to Upper Case" onclick="funuc()"/>
+    </div>
+    <pre>
+        Result : <span id="ans"></span>
+    </pre>
+</body>
+</html>
