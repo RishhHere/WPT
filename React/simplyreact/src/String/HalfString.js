@@ -6,7 +6,7 @@ export default class HalfString extends React.Component{
     }
     handler=(e)=>{
         let str = e.target.value;
-        this.setState({halfstr:str.substring(0,str.length/2)});
+        this.setState({halfstr:str.substring(0,str.length/2).toUpperCase()});
     }
     render(){
         return(
