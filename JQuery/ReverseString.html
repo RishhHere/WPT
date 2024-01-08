@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha256-2TnSHycBDAm2wpZmgdi0z81kykGPJAkiUY+Wf97RbvY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>TextField Reversal</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $("#reverse-button").click(function(){
+          var inputText = $("#input-text").val();
+          var reversedText = inputText.split("").reverse().join("");
+          $("#reversed-text").text(reversedText);
+        });
+      });
+    </script>
+  </head>
+  <body class="p-3 mb-2 bg-dark text-white">
+    <div class="p-3 mb-2 bg-warning text-dark">
+        Enter String: <input type="text" id="input-text">
+        <br>
+        <br>
+        <button id="reverse-button">Reverse</button>
+    </div>
+    <br>
+    <br>
+    <div class="p-3 mb-2 bg-info text-light">
+        <p id="reversed-text" align="center"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha256-gOQJIa9+K/XdfAuBkg2ONAdw5EnQbokw/s2b8BqsRFg=" crossorigin="anonymous"></script>
+  </body>
+</html>
